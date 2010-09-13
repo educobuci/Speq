@@ -1,0 +1,8 @@
+*.pdb
+*.pidb
+*.suo
+*.user
+*.userprefs
+*/bin/*
+*/Tests/bin/*
+*/obj/*
