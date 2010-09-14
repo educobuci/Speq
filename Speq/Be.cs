@@ -13,8 +13,8 @@ namespace Speq
         public static Matcher<T> Equal<T>(T to)
         {
             return new Matcher<T>(
-                (target) => assert(target.Equals(to)),
-                (target) => assert(!target.Equals(to)));
+                (target) => Assert.AreEqual(to, target),
+                (target) => Assert.AreNotEqual(to, target));
         }
 		
         public static Matcher<T> Greater<T>(T than) where T : IComparable
