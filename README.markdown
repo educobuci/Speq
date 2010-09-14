@@ -1,8 +1,12 @@
+##Introduction
+This is a simple framwork for BDD in .NET. It is highly inspired by RSpec and uses the NUnit stack runners and assertions.
+The goal is to provide a better vacabulary for .NET tests.
+
 ##Example
 
 	using System;
 	using NUnit.Framework;
-	using SpecUnit;
+	using Speq;
 
 	[TestFixture]
 	public class DescribeBowlingGame
