@@ -3,6 +3,5 @@
 *.suo
 *.user
 *.userprefs
-*/bin/*
-*/Tests/bin/*
-*/obj/*
+*/*/bin
+*/*/obj
