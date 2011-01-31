@@ -44,10 +44,35 @@ namespace Tests
 		}
 		
 		[Test]
-		public void TestFalse()
+		public void FalseTest()
 		{
 			TestMatcher(false, Be.False(), true);
 		}
+
+        [Test]
+        public void RegexTest()
+        {
+            TestMatcher("abc", Match.Regex("[a-c]"), "def");
+        }
+
+
+        [Test]
+        public void RaiseExceptionTest()
+        {
+            TestMatcher(() => { throw new Exception(); }, Raise.Exception(), () => { });
+        }
+
+        [Test]
+        public void RaiseExceptionOfTypeTest()
+        {
+            TestMatcher(() => { throw new InvalidOperationException(); }, Raise.Exception<InvalidOperationException>(), () => { });
+        }
+
+        [Test]
+        public void ContainsTest()
+        {
+            TestMatcher("abc", Speq.Contains.Text("b"), "d");
+        }
 		
 		private void TestMatcher<T>(T target, Matcher<T> matcher, T unexpected)
 		{

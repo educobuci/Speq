@@ -36,11 +36,16 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Be.cs" />
+    <Compile Include="Contains.cs" />
+    <Compile Include="Match.cs" />
     <Compile Include="Matcher.cs" />
     <Compile Include="ObjectExtentions.cs" />
+    <Compile Include="Raise.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
